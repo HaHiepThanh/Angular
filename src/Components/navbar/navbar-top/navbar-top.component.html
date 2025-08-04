@@ -1,0 +1,13 @@
+<div class="navbar-top">
+  @for(item of topHeader; track item.id){
+<!--    @if (item.id <= 3){-->
+<!--      <app-dots></app-dots>-->
+<!--    }@else{-->
+<!--    <app-rectangle></app-rectangle>-->
+<!--    }-->
+    <app-dots></app-dots>
+    <app-icons [icon]="item"></app-icons>
+    <app-small-text-for-header [text]="item"></app-small-text-for-header>
+  }
+
+</div>
