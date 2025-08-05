@@ -1,4 +1,36 @@
 <div class="navbar">
-  <app-navbar-top></app-navbar-top>
-  <app-navbar-bottom></app-navbar-bottom>
+  <div class="navbar-top">
+    @for(item of topHeader; track item.id){
+      @if (item.id <= 3){
+        <app-dots></app-dots>
+      }@else{
+        <app-rectangle></app-rectangle>
+      }
+      <app-icons [icon]="item"></app-icons>
+      <app-small-text-for-header [text]="item"></app-small-text-for-header>
+    }
+  </div>
+  <div class="navbar-bottom">
+    <app-logo-cellphone-s></app-logo-cellphone-s>
+    <button class="button1">
+      <mat-icon>view_module</mat-icon>
+      <p>Danh mục</p>
+      <mat-icon>expand_more</mat-icon>
+    </button>
+    <button class="button1">
+      <mat-icon>place</mat-icon>
+      <p>Hồ Chí Minh</p>
+      <mat-icon>expand_more</mat-icon>
+    </button>
+    <app-input-navbar></app-input-navbar>
+    <button class="button2" (click)="openDialog()">
+      <p>Giỏ hàng</p>
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+    <button class="button1">
+      <p>Tài khoản</p>
+      <mat-icon>person_pin</mat-icon>
+    </button>
+
+  </div>
 </div>

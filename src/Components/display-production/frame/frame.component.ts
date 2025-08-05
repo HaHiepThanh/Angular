@@ -13,11 +13,12 @@ import {MatIconModule} from '@angular/material/icon';
 export class FrameComponent implements OnInit {
 
   @Input() frameItem!: FrameSales;
+
   @Output() addToCartEvent = new EventEmitter<FrameSales>();
 
   addToCart(item: FrameSales) {
     console.log(item);
-     // this.addToCartEvent.emit(item);
+    this.addToCartEvent.emit(item);
   }
 
   constructor() {
@@ -25,4 +26,5 @@ export class FrameComponent implements OnInit {
 
   ngOnInit() {
   }
+
 }

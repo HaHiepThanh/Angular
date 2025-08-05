@@ -1,3 +1,6 @@
-<app-navbar></app-navbar>
-<app-display-production></app-display-production>
+<div class="container">
+  <app-navbar [cartList]="cartItems"></app-navbar>
+  <app-display-production (addToCartEvent)="addToCart($event)"></app-display-production>
+
+</div>
 

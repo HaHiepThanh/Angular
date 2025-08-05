@@ -1,7 +1,7 @@
 <div class="main">
 
   @for (item of framedisplay; track item.id){
-    <app-frame [frameItem]="item"></app-frame>
+    <app-frame [frameItem]="item" (addToCartEvent)="addItem($event)"></app-frame>
   }
 
 </div>

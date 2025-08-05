@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Output} from '@angular/core';
 import {FrameComponent} from './frame/frame.component';
 import {FrameSales} from '../../Models/frameSales.models';
 
@@ -13,9 +13,10 @@ import {FrameSales} from '../../Models/frameSales.models';
 })
 export class DisplayProductionComponent {
 
-  cartList: FrameSales[] = [];
-  addItem(item:FrameSales){
-    this.cartList.push(item);
+  @Output() addToCartEvent = new EventEmitter<FrameSales>()
+
+  addItem(newItem: FrameSales) {
+    this.addToCartEvent.emit(newItem);
   }
 
   framedisplay:FrameSales[] = [

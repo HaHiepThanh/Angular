@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {topNavbar} from '../../../../Models/topNavbar.model';
+import {topNavbar} from '../../../Models/topNavbar.model';
 
 @Component({
   selector: 'app-small-text-for-header',

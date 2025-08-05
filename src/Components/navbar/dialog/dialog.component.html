@@ -1,0 +1,8 @@
+<h1>Trong giỏ hang của bạn đang có:</h1>
+@for(item of this.data.cartList; track item.id){
+  <div class="dialogItem">
+    <app-dots></app-dots>
+    <p>{{item.description}}</p>
+  </div>
+}
+
