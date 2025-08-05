@@ -1,0 +1,16 @@
+<div class="navbar-bottom">
+  <app-logo-cellphone-s></app-logo-cellphone-s>
+
+  @for(item of buttonDisplay1; track item.id){
+    <app-button1 [button1Item]="item"></app-button1>
+  }
+
+  <app-input-navbar></app-input-navbar>
+
+  @for(item of buttonDisplay2; track item.id){
+    <app-button2 [buttonsItem]="item"></app-button2>
+  }
+
+</div>
+
+

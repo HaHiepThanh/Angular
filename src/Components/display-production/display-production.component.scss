@@ -1,8 +1,10 @@
-.example-card {
-  max-width: 400px;
-}
+.main{
+  width: 100%;
+  background-color: white;
+  display: grid;
+  justify-self: stretch;
+  grid-gap: 34px;
+  grid-template-columns: repeat(5, minmax(225px, 1fr));
+  padding: 100px 125px;
 
-.example-header-image {
-  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
-  background-size: cover;
 }

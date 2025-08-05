@@ -1,4 +1,4 @@
-import {Component, inject, Input} from '@angular/core';
+import {Component, inject, Input, OnInit} from '@angular/core';
 import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
 import {topNavbar} from '../../../../Models/topNavbar.model';
@@ -20,8 +20,11 @@ const THUMBUP_ICON =
   templateUrl: './icons.component.html',
   styleUrl: './icons.component.scss'
 })
-export class IconsComponent {
+export class IconsComponent  implements OnInit {
 
+  ngOnInit(): void {
+
+  }
   @Input() icon!:topNavbar;
 
   constructor() {
