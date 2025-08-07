@@ -1,16 +1,25 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, LOCALE_ID, OnInit} from '@angular/core';
 import {FrameSales} from '../../Models/frameSales.models';
 import {MatIconModule} from '@angular/material/icon';
 import {Router} from '@angular/router';
 import {ProductService} from '../../services/product.service';
+import {DecimalPipe, registerLocaleData} from '@angular/common';
+import localeVi from '@angular/common/locales/vi';
+
+registerLocaleData(localeVi);
+
 
 @Component({
   selector: 'app-frame',
   imports: [
-    MatIconModule
+    MatIconModule,
+    DecimalPipe
   ],
   templateUrl: './frame.component.html',
   styleUrl: './frame.component.scss',
+  providers: [
+    { provide: LOCALE_ID, useValue: 'vi' }
+  ]
 })
 export class FrameComponent implements OnInit {
 

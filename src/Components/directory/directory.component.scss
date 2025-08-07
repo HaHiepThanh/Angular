@@ -1,0 +1,207 @@
+.directory{
+  width: 100%;
+  height: 32px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.directory div{
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.directory div a{
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.directory div div{
+  font-size: 16px;
+  color: #707070;
+}
+
+#directory-mac{
+  color: #707070;
+}
+
+.advertisement{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 24px;
+}
+
+.advertisement img{
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.title{
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.selection-top{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.selection-top div{
+  padding: 12px 8px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #E4E4E7;
+}
+
+.selection-top p{
+  margin: 0;
+}
+
+.selection-middle{
+  width: 100%;
+  height: 136px;
+}
+
+.title-2{
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.selection-middle-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.selection-middle-button button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background-color: #F2F2F3;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#selection-middle-button-unique{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid #D70019;
+  color: #D70019;
+  cursor: pointer;
+}
+
+#selection-middle-button-unique:hover{
+  background-color: #FAE6E8;
+}
+
+.selection-middle-button p{
+  margin: 0;
+  font-size: 14px;
+}
+
+.selection-middle-button button:hover{
+  background-color: #CFCFD3;
+}
+
+.selection-middle-button button:active{
+  border: 1px solid #D70019;
+  color: #D70019;
+  background-color: #FAE6E8;
+}
+
+.selection-bottom{
+  width: 100%;
+  height: 96px;
+  margin-top: 24px;
+}
+
+.selection-bottom-top{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selection-bottom-top p{
+  margin: 0;
+}
+.selection-bottom-top-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.selection-bottom-top-left p{
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.selection-bottom-top-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.selection-bottom-top-right button{
+  padding: 7px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E4E4E7;
+  border-radius: 50px;
+  gap: 4px;
+  background-color: #F7F7F8;
+}
+
+.selection-bottom-top-right button:hover{
+  background-color: #CFCFD3;
+}
+
+.selection-bottom-top-right button:active{
+  border: 1px solid #3B81F6;
+  color: #3B81F6;
+  background-color: #BFD7FE;
+}

@@ -3,8 +3,8 @@ export interface FrameSales {
   text1: string;
   img: string;
   description: string;
-  saleprice: string;
-  originalprice: string;
+  saleprice: number;
+  originalprice: number;
   smemberdiscount: number;
   sstudentdiscount: number;
   rating: number;

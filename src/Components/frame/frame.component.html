@@ -20,20 +20,22 @@
     </div>
     <div class="framePrice">
       <div class="sale">
-        <p>{{frameItemList.saleprice}}đ</p>
+        <p>{{frameItemList.saleprice | number: '1.0-0'}}đ</p>
       </div>
-      <div class="original">
-        <p>{{frameItemList.originalprice}}đ</p>
-      </div>
+      @if(frameItemList.originalprice!=0){
+        <div class="original">
+          <p>{{frameItemList.originalprice | number: '1.0-0'}}đ</p>
+        </div>
+      }
     </div>
     @if(frameItemList.smemberdiscount!=0){
       <div class="frameSmember">
-        <p>Smember giảm đến {{frameItemList.smemberdiscount}}.000đ</p>
+        <p>Smember giảm đến {{frameItemList.smemberdiscount | number: '1.0-0'}}đ</p>
       </div>
     }
     @if (frameItemList.sstudentdiscount!=0){
       <div class="frameSstudent">
-        <p>S-Student giảm đến {{frameItemList.sstudentdiscount}}.000đ</p>
+        <p>S-Student giảm đến {{frameItemList.sstudentdiscount | number: '1.0-0'}}đ</p>
       </div>
     }
     <div class="frameProductDescription2">

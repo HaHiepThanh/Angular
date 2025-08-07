@@ -1,4 +1,7 @@
 <div class="main">
+  <div class="selection">
+    <app-directory></app-directory>
+  </div>
   <div class="display-production">
     @for (item of this.productHome; track item.id){
       <app-frame class="frame" [frameItemList]="item" ></app-frame>

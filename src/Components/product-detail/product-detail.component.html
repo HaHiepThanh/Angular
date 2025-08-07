@@ -28,28 +28,21 @@
         }
       </div>
       <div class="price">
-        <p class="sale-price">{{this.productDetail.saleprice}}</p>
-        <p class="original-price">{{this.productDetail.originalprice}}</p>
+        <p class="sale-price">{{this.productDetail.saleprice | number: '1.0-0'}}đ</p>
+        <p class="original-price">{{this.productDetail.originalprice | number: '1.0-0'}}đ</p>
       </div>
 
       <!-- Options -->
       <div class="options">
-        <p class="option-label">{{ this.productDetail.smemberdiscount }}</p>
+        <p class="option-label">Smember giảm đến: {{ this.productDetail.smemberdiscount | number: '1.0-0' }}đ</p>
       </div>
       <div class="options">
-        <p class="option-label">{{ this.productDetail.sstudentdiscount }}</p>
+        <p class="option-label">S-Student giảm đến: {{ this.productDetail.sstudentdiscount | number: '1.0-0' }}đ</p>
       </div>
       <div class="actions_wrraper">
-        <!-- Quantity -->
-        <div class="quantity-section">
-          <button>-</button>
-          <input type="text" class="quantity-input" value="1">
-          <button>+</button>
-        </div>
 
-        <!-- Actions -->
         <div class="actions">
-          <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" (click)="addToCart(this.productDetail.id)">Add to Cart</button>
           <button class="buy-now">Buy Now</button>
         </div>
       </div>

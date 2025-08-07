@@ -4,12 +4,14 @@ import {Router} from '@angular/router';
 import {ProductService} from '../../../services/product.service';
 import {FrameComponent} from '../../../Components/frame/frame.component';
 import {MatIconModule} from '@angular/material/icon';
+import {DirectoryComponent} from '../../../Components/directory/directory.component';
 
 @Component({
   selector: 'app-home',
   imports: [
     FrameComponent,
-    MatIconModule
+    MatIconModule,
+    DirectoryComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

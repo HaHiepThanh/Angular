@@ -6,13 +6,13 @@
     <p>{{ cartListForSale.description }}</p>
   </div>
   <div class="item-price">
-    <p>{{ cartListForSale.saleprice }}</p>
+    <p>{{ cartListForSale.saleprice | number: '1.0-0'}} đ</p>
   </div>
   <div class="item-quantity">
     <p>{{cartListForSale.quantity}}</p>
   </div>
   <div class="item-price">
-    <p></p>
+    <p>{{this.productService.calculateThanhTien(cartListForSale.id ) | number: '1.0-0'}}đ</p>
   </div>
   <mat-icon class="icon">delete</mat-icon>
 </div>

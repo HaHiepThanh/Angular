@@ -34,7 +34,7 @@
 <!--        }@else{-->
 <!--          <p class="mid">{{totalAmount}}0.000đ</p>-->
 <!--        }-->
-      <p class="mid">{{totalAmount}}đ</p>
+      <p class="mid">{{totalAmount | number: '1.0-0'}} đ</p>
         <p class="bot">(Đã bao gồm VAT nếu có)</p>
     </div>
     <div class="container-below">
