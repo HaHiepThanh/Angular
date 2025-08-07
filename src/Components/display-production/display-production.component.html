@@ -1,7 +1,13 @@
 <div class="main">
-
-  @for (item of framedisplay; track item.id){
-    <app-frame [frameItem]="item" (addToCartEvent)="addItem($event)"></app-frame>
-  }
-
+  <div class="display-production">
+    @for (item of this.frameList; track item.id){
+      <app-frame [frameItemList]="item" ></app-frame>
+    }
+  </div>
+  <div class="display-more">
+    <button class="display-more-button">
+      <p>Xem thêm 77 sản phẩm</p>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+  </div>
 </div>

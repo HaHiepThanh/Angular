@@ -1,11 +1,15 @@
 import {Component, inject} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {DotsComponent} from '../dots/dots.component';
+import {MatCard, MatCardHeader, MatCardSubtitle, MatCardTitle, MatCardTitleGroup} from '@angular/material/card';
 
 @Component({
   selector: 'app-dialog',
   imports: [
-    DotsComponent
+    MatCardHeader,
+    MatCardTitleGroup,
+    MatCardTitle,
+    MatCardSubtitle,
+    MatCard
   ],
   templateUrl: './dialog.component.html',
   styleUrl: './dialog.component.scss'

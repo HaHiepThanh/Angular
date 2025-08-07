@@ -1,8 +1,14 @@
-<h1>Trong giỏ hang của bạn đang có:</h1>
+<h1>Trong giỏ hàng của bạn đang có:</h1>
 @for(item of this.data.cartList; track item.id){
   <div class="dialogItem">
-    <app-dots></app-dots>
-    <p>{{item.description}}</p>
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title class="dialogTitle">{{item.description}}</mat-card-title>
+          <mat-card-subtitle>{{item.saleprice}}</mat-card-subtitle>
+          <img class="dialogImage" mat-card-md-image src="{{item.img}}"  alt="Image of a Shiba Inu">
+        </mat-card-title-group>
+      </mat-card-header>
+    </mat-card>
   </div>
 }
-

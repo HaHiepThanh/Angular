@@ -10,11 +10,16 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: #DB192F;
-    padding: 0 100px;
-    mat-icon{
-      background-color: white;
-      fill: white;
-      color: white !important;
+    padding: 0 50px;
+    .navbar-top-text{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: white;
     }
   }
   .navbar-bottom{
@@ -24,7 +29,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: #DB192F;
-    padding: 16px 125px;
+    padding: 16px 100px;
     .button1{
       display: flex;
       flex-direction: row;
@@ -39,6 +44,9 @@
       background-color: #E45464;
       color: white;
       cursor: pointer;
+    }
+    .button1:hover{
+      background-color: #CD1428;
     }
     .button2{
       display: flex;

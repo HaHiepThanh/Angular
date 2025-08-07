@@ -1,6 +1,7 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FrameSales} from '../../../Models/frameSales.models';
 import {MatIconModule} from '@angular/material/icon';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-frame',
@@ -12,19 +13,17 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class FrameComponent implements OnInit {
 
-  @Input() frameItem!: FrameSales;
+  @Input() frameItemList!: FrameSales;
 
-  @Output() addToCartEvent = new EventEmitter<FrameSales>();
-
-  addToCart(item: FrameSales) {
-    console.log(item);
-    this.addToCartEvent.emit(item);
+  constructor(
+    private router: Router,
+  ) {
   }
 
-  constructor() {
-  }
+  ngOnInit() {}
 
-  ngOnInit() {
+  navigateToDetail(id:string){
+    this.router.navigate(['/detail',id]).then();
   }
 
 }

@@ -1,14 +1,36 @@
 <div class="navbar">
   <div class="navbar-top">
-    @for(item of topHeader; track item.id){
-      @if (item.id <= 3){
-        <app-dots></app-dots>
-      }@else{
-        <app-rectangle></app-rectangle>
-      }
-      <app-icons [icon]="item"></app-icons>
-      <app-small-text-for-header [text]="item"></app-small-text-for-header>
-    }
+    <div class="navbar-top-text">
+      <app-dots></app-dots>
+      <mat-icon>brightness_7</mat-icon>
+      <p>Sản phẩm Chính hãng - Xuẩt VAT đầy đủ</p>
+    </div>
+    <div class="navbar-top-text">
+      <app-dots></app-dots>
+      <mat-icon>local_shipping</mat-icon>
+      <p>Giao nhanh - Miễn phí cho đơn 300k</p>
+    </div>
+    <div class="navbar-top-text">
+      <app-dots></app-dots>
+      <mat-icon>cached</mat-icon>
+      <p>Thu cũ giá ngon - Lên đời tiết kiệm</p>
+    </div>
+    <div class="navbar-top-text">
+      <app-rectangle></app-rectangle>
+      <mat-icon>home</mat-icon>
+      <p>Cửa hàng gần bạn</p>
+    </div>
+    <div class="navbar-top-text">
+      <app-rectangle></app-rectangle>
+      <mat-icon>descriptions</mat-icon>
+      <p>Tra cứu đơn hàng</p>
+    </div>
+    <div class="navbar-top-text">
+      <app-rectangle></app-rectangle>
+      <mat-icon>phone</mat-icon>
+      <p>1800 2079</p>
+    </div>
+
   </div>
   <div class="navbar-bottom">
     <app-logo-cellphone-s></app-logo-cellphone-s>
@@ -31,6 +53,5 @@
       <p>Tài khoản</p>
       <mat-icon>person_pin</mat-icon>
     </button>
-
   </div>
 </div>

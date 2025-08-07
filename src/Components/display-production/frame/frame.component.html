@@ -1,62 +1,60 @@
-<div class="frame">
+<div class="frame" (click)="navigateToDetail(frameItemList.id)">
   <div class="saleInformation">
     <div class="saleInformationTitle">
-      @if(frameItem.percentage1.length == 0){
+      @if(frameItemList.text1.length == 0){
         <div class="saleInformationTitleLeft"></div>
       }@else{
         <div class="saleInformationTitleLeft">
-          <p>{{frameItem.text1}}</p>
-          <p>{{frameItem.percentage1}}</p>
+          <p>{{frameItemList.text1}}</p>
         </div>
       }
       <div class="saleInformationTitleRight" >
-        <p>{{frameItem.text2}}</p>
-        <p>{{frameItem.percentage2}}</p>
+        <p>Trả góp 0%</p>
       </div>
     </div>
     <div class="frameImage">
-      <img src="{{frameItem.img}}" alt="">
+      <img src="{{frameItemList.img}}" alt="">
     </div>
     <div class="frameProductionDescription">
-      <p>{{frameItem.description}}</p>
+      <p>{{frameItemList.description}}</p>
     </div>
     <div class="framePrice">
       <div class="sale">
-        <p>{{frameItem.saleprice}}</p>
+        <p>{{frameItemList.saleprice}}</p>
       </div>
       <div class="original">
-        <p>{{frameItem.originalprice}}</p>
+        <p>{{frameItemList.originalprice}}</p>
       </div>
     </div>
-    @if (frameItem.smemberdiscount.length==0){
+    @if (frameItemList.smemberdiscount.length==0){
     }@else{
       <div class="frameSmember">
-        <p>{{frameItem.smemberdiscount}}</p>
+        <p>{{frameItemList.smemberdiscount}}</p>
       </div>
     }
-    @if(frameItem.sstudentdiscount.length == 0){
+    @if(frameItemList.sstudentdiscount.length == 0){
     }@else {
       <div class="frameSstudent">
-        <p>{{frameItem.sstudentdiscount}}</p>
+        <p>{{frameItemList.sstudentdiscount}}</p>
       </div>
     }
     <div class="frameProductDescription2">
-      <p>{{frameItem.description2}}</p>
+      <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
     </div>
   </div>
   <div class="rating">
-    @if(frameItem.rating == 0){
+    @if(frameItemList.rating == 0){
       <div class="ratingLeft">
       </div>
     } @else {
       <div class="ratingLeft">
-        <mat-icon class="matIcon">{{frameItem.star}}</mat-icon>
-        <p>{{frameItem.rating}}</p>
+        <mat-icon class="matIcon">star</mat-icon>
+        <p>{{frameItemList.rating}}</p>
       </div>
     }
     <div class="ratingRight">
-      <button class="ButtonToCart" (click)="addToCart(frameItem)">
-        <mat-icon >thumb_up_alt</mat-icon>
+      <button class="ButtonToCart">
+        <mat-icon >add_shopping_cart</mat-icon>
         <p>Thêm vào giỏ hàng</p>
       </button>
     </div>
