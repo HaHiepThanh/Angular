@@ -20,22 +20,20 @@
     </div>
     <div class="framePrice">
       <div class="sale">
-        <p>{{frameItemList.saleprice}}</p>
+        <p>{{frameItemList.saleprice}}đ</p>
       </div>
       <div class="original">
-        <p>{{frameItemList.originalprice}}</p>
+        <p>{{frameItemList.originalprice}}đ</p>
       </div>
     </div>
-    @if (frameItemList.smemberdiscount.length==0){
-    }@else{
+    @if(frameItemList.smemberdiscount!=0){
       <div class="frameSmember">
-        <p>{{frameItemList.smemberdiscount}}</p>
+        <p>Smember giảm đến {{frameItemList.smemberdiscount}}.000đ</p>
       </div>
     }
-    @if(frameItemList.sstudentdiscount.length == 0){
-    }@else {
+    @if (frameItemList.sstudentdiscount!=0){
       <div class="frameSstudent">
-        <p>{{frameItemList.sstudentdiscount}}</p>
+        <p>S-Student giảm đến {{frameItemList.sstudentdiscount}}.000đ</p>
       </div>
     }
     <div class="frameProductDescription2">
@@ -53,8 +51,8 @@
       </div>
     }
     <div class="ratingRight">
-      <button class="ButtonToCart">
-        <mat-icon >add_shopping_cart</mat-icon>
+      <button class="ButtonToCart" (click)="$event.stopPropagation(); addToCart(frameItemList.id)">
+        <mat-icon>add_shopping_cart</mat-icon>
         <p>Thêm vào giỏ hàng</p>
       </button>
     </div>

@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FrameSales} from '../../../Models/frameSales.models';
+import {FrameSales} from '../../Models/frameSales.models';
 import {MatIconModule} from '@angular/material/icon';
 import {Router} from '@angular/router';
+import {ProductService} from '../../services/product.service';
 
 @Component({
   selector: 'app-frame',
@@ -17,6 +18,7 @@ export class FrameComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private productService: ProductService,
   ) {
   }
 
@@ -24,6 +26,10 @@ export class FrameComponent implements OnInit {
 
   navigateToDetail(id:string){
     this.router.navigate(['/detail',id]).then();
+  }
+
+  addToCart(id:string){
+    this.productService.addProductToCart(id);
   }
 
 }

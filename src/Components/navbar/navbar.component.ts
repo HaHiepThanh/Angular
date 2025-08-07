@@ -5,8 +5,7 @@ import {RectangleComponent} from './rectangle/rectangle.component';
 import {LogoCellphoneSComponent} from './logo-cellphone-s/logo-cellphone-s.component';
 import {InputNavbarComponent} from './input-navbar/input-navbar.component';
 import {MatIconModule} from '@angular/material/icon';
-import {MatDialog} from '@angular/material/dialog';
-import {DialogComponent} from './dialog/dialog.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -22,17 +21,17 @@ import {DialogComponent} from './dialog/dialog.component';
 })
 export class NavbarComponent {
 
+  constructor(private router: Router) {
+  }
+
   @Input() cartList!: FrameSales[] ;
 
-  dialog = inject(MatDialog);
-  openDialog() {
-    this.dialog.open(DialogComponent, {
-      width: '1000px',
-      height: '700px',
-      data: {
-        cartList: this.cartList,
-      },
-    });
+  navigateToCart(){
+    this.router.navigate([`/cart`]).then();
+  }
+
+  navigateToHome(){
+    this.router.navigate(['/home']).then;
   }
 
 }

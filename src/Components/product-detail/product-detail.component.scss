@@ -1,0 +1,169 @@
+.detail-container {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.breadcrumb a {
+  color: #777;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  color: #000;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product-images {
+  img{
+    width: 369px;
+    height: 369px;
+  }
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-info {
+}
+
+.product-info h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.sku {
+  font-size: 24px;
+  color: #999;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+  .icon{
+    color: #FFD531;
+  }
+}
+
+.price {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  .sale-price{
+    color: #d70018;
+    font-weight: 700;
+  }
+  .original-price{
+    font-size: 24px;
+    color: #4a4a4a;
+    text-decoration: line-through;
+  }
+}
+
+.options {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.option-label {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+
+/* Quantity section */
+.quantity-section {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.quantity-section button {
+  padding: 10px 15px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  margin: 0 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+/* Actions */
+.actions_wrraper {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background: #f4b400;
+  color: #fff;
+}
+
+.buy-now {
+  background: #b12704;
+  color: #fff;
+}
+
+.tab-content{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}

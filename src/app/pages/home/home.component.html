@@ -1,4 +1,13 @@
-<div class="container">
-<!--  <app-display-production (addToCartEvent)="addToCart($event)"></app-display-production>-->
-  <app-display-production></app-display-production>
+<div class="main">
+  <div class="display-production">
+    @for (item of this.productHome; track item.id){
+      <app-frame class="frame" [frameItemList]="item" ></app-frame>
+    }
+  </div>
+  <div class="display-more">
+    <button class="display-more-button">
+      <p>Xem thêm 77 sản phẩm</p>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+  </div>
 </div>

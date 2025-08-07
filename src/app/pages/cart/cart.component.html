@@ -1,1 +1,46 @@
-<p>cart works!</p>
+<div class="cart-main">
+  <div class="cart-main-display-left">
+    <div class="title">
+      <p>GIỎ HÀNG</p>
+    </div>
+    <div class="list-items-title">
+      <div class="item-image">
+      </div>
+      <div class="item-name">
+        <p>Sản phẩm</p>
+      </div>
+      <div class="item-price">
+        <p>Đơn giá</p>
+      </div>
+      <div class="item-quantity">
+        <p>Số lượng</p>
+      </div>
+      <div class="item-amount">
+        <p>Thành tiền</p>
+      </div>
+      <mat-icon class="icon">delete</mat-icon>
+    </div>
+    <div class="list-items">
+      @for (item of itemList;track item.id){
+        <app-shopping-cart [cartListForSale]="item"></app-shopping-cart>
+      }
+    </div>
+  </div>
+  <div class="cart-main-display-right">
+    <div class="container-above">
+        <p class="top">Tổng tiền thanh toán</p>
+<!--        @if(this.totalAmount == 0){-->
+<!--          <p class="mid">0đ</p>-->
+<!--        }@else{-->
+<!--          <p class="mid">{{totalAmount}}0.000đ</p>-->
+<!--        }-->
+      <p class="mid">{{totalAmount}}đ</p>
+        <p class="bot">(Đã bao gồm VAT nếu có)</p>
+    </div>
+    <div class="container-below">
+      <button class="button">
+        <p>Mua hàng</p>
+      </button>
+    </div>
+  </div>
+</div>

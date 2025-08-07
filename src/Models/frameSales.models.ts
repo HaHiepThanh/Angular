@@ -5,8 +5,8 @@ export interface FrameSales {
   description: string;
   saleprice: string;
   originalprice: string;
-  smemberdiscount: string;
-  sstudentdiscount: string;
+  smemberdiscount: number;
+  sstudentdiscount: number;
   rating: number;
   quantity: number;
 }

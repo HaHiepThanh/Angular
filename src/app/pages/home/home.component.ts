@@ -1,27 +1,33 @@
 import { Component } from '@angular/core';
-import {DisplayProductionComponent} from '../../../Components/display-production/display-production.component';
 import {FrameSales} from '../../../Models/frameSales.models';
 import {Router} from '@angular/router';
+import {ProductService} from '../../../services/product.service';
+import {FrameComponent} from '../../../Components/frame/frame.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-home',
   imports: [
-    DisplayProductionComponent
+    FrameComponent,
+    MatIconModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 
+  productHome:FrameSales[] = [];
+
   constructor(
     private router: Router,
+    private productService: ProductService,
   ) {
+    this.productHome = this.productService.frameDisplay;
+    console.log(this.productHome);
   }
 
-  cartItems: FrameSales[] = [];
-
   addToCart(item: FrameSales) {
-    this.cartItems.push(item);
+    this.productHome.push(item);
   }
 
 }

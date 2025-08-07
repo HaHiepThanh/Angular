@@ -1,0 +1,61 @@
+<div class="detail-container">
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <mat-icon>home</mat-icon>
+    <a href="#">Trang chủ</a> /
+    <a href="#">Laptop</a> /
+    <a href="#">Mac</a> /
+    <span>{{ this.productDetail.description }}</span>
+  </nav>
+
+  <!-- Product Details -->
+  <div class="product-detail">
+    <!-- Images -->
+    <div class="product-images">
+      <img src="{{this.productDetail.img}}" alt="Main Product Image"
+           class="main-image">
+    </div>
+
+    <!-- Info -->
+    <div class="product-info">
+      <h1>{{ this.productDetail.description }}</h1>
+      <div class="sku">
+        <mat-icon class="icon">star</mat-icon>
+        @if (this.productDetail.rating == 0){
+          <p>Chưa có đánh giá</p>
+        }@else{
+          <p>{{this.productDetail.rating}}</p>
+        }
+      </div>
+      <div class="price">
+        <p class="sale-price">{{this.productDetail.saleprice}}</p>
+        <p class="original-price">{{this.productDetail.originalprice}}</p>
+      </div>
+
+      <!-- Options -->
+      <div class="options">
+        <p class="option-label">{{ this.productDetail.smemberdiscount }}</p>
+      </div>
+      <div class="options">
+        <p class="option-label">{{ this.productDetail.sstudentdiscount }}</p>
+      </div>
+      <div class="actions_wrraper">
+        <!-- Quantity -->
+        <div class="quantity-section">
+          <button>-</button>
+          <input type="text" class="quantity-input" value="1">
+          <button>+</button>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions">
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+      <div class="tab-content">
+        <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+      </div>
+    </div>
+  </div>
+</div>

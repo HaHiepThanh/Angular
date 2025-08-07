@@ -33,7 +33,7 @@
 
   </div>
   <div class="navbar-bottom">
-    <app-logo-cellphone-s></app-logo-cellphone-s>
+    <app-logo-cellphone-s class="logo" (click)="navigateToHome()"></app-logo-cellphone-s>
     <button class="button1">
       <mat-icon>view_module</mat-icon>
       <p>Danh mục</p>
@@ -45,7 +45,7 @@
       <mat-icon>expand_more</mat-icon>
     </button>
     <app-input-navbar></app-input-navbar>
-    <button class="button2" (click)="openDialog()">
+    <button class="button2" (click)="navigateToCart()">
       <p>Giỏ hàng</p>
       <mat-icon>shopping_cart</mat-icon>
     </button>
