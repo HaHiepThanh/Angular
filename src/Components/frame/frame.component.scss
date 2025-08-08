@@ -54,6 +54,10 @@
         width: 160px;
         height: 160px;
       }
+      img:hover{
+        transition: .3s;
+        transform: scale(1.05);
+      }
     }
     .frameProductionDescription{
       line-clamp: 2;

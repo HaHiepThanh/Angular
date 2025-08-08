@@ -29,17 +29,16 @@
 
 .product-detail {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
   gap: 30px;
 }
 
 .product-images {
   img{
-    width: 369px;
-    height: 369px;
+    max-width: 300px;
+    height: auto;
   }
 }
 
@@ -53,7 +52,7 @@
 }
 
 .product-info h1 {
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 15px;
   color: #000;
 }
