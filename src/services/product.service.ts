@@ -251,6 +251,21 @@ export class ProductService {
     },
   ]
 
+  Major:any=[
+    {
+      id:1,
+      majorName: 'Xã hội - Kinh tế',
+    },
+    {
+      id:2,
+      majorName: 'Đồ hoạ',
+    },
+    {
+      id:3,
+      majorName: 'Lập trình',
+    }
+    ]
+
   cartList:FrameSales[]=[];
 
   getDetailProduct(id:string):FrameSales{
